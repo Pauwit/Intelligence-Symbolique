@@ -226,6 +226,7 @@ Les notebooks suivants sont disponibles dans le depot CoursIA ([jsboige/CoursIA]
 | [J3](#j3--serveur-mcp-doutils-danalyse-symbolique) | Serveur MCP d'outils d'analyse symbolique | 3/5 |
 | [J4](#j4--integration-llm--solveurs-symboliques-llm-as-a-reasoner) | Integration LLM + solveurs symboliques (LLM-as-a-reasoner) | 4/5 |
 | [J5](#j5--apprentissage-par-renforcement-multi-agents-marl-et-emergence-de-cooperation) | Apprentissage par renforcement multi-agents (MARL) et emergence de cooperation | 4/5 |
+| [J6](#j6--diagnostic-medical-multi-paradigme-par-agents-symboliques) | Diagnostic medical multi-paradigme par agents symboliques | 4/5 |
 
 ### Categorie K : Cryptographie Symbolique et Securite
 
@@ -242,6 +243,7 @@ Les notebooks suivants sont disponibles dans le depot CoursIA ([jsboige/CoursIA]
 | [L1](#l1--resolution-de-sudoku-par-multiples-solveurs-sat-cp-lll) | Resolution de Sudoku par multiples solveurs (SAT, CP, LLL) | 2/5 |
 | [L2](#l2--generation-procedurale-par-contraintes-de-niveaux-de-jeu) | Generation procedurale par contraintes de niveaux de jeu | 3/5 |
 | [L3](#l3--resolution-de-jeux-combinatoires-par-minimax-et-alpha-beta-symbolique) | Resolution de jeux combinatoires par minimax et alpha-beta symbolique | 3/5 |
+| [L4](#l4--benchmark-cross-paradigme-de-solveurs-de-jeux-sudoku-connect-four-wordle) | Benchmark cross-paradigme de solveurs de jeux (Sudoku, Connect Four, Wordle) | 3/5 |
 
 ---
 
@@ -257,6 +259,7 @@ Les notebooks suivants sont disponibles dans le depot CoursIA ([jsboige/CoursIA]
 | [M4](#m4--decouverte-scientifique-automatisee-par-regression-symbolique-et-llm) | Decouverte scientifique automatisee par regression symbolique et LLM | 4/5 |
 | [M5](#m5--evaluation-comparee-llm-vs-approches-symboliques-sur-un-benchmark) | Evaluation comparee LLM vs. approches symboliques sur un benchmark | 2/5 |
 | [M6](#m6--theorie-de-linformation-integree-iit-et-conscience-artificielle-par-pyphi) | Theorie de l'Information Integree (IIT) et conscience artificielle par PyPhi | 3/5 |
+| [M7](#m7--generation-de-contenu-neuro-symbolique-par-semantic-kernel--validation-csp) | Generation de contenu neuro-symbolique par Semantic Kernel + validation CSP | 4/5 |
 
 ### Categorie N : Raisonnement Causal et Decision
 
@@ -268,6 +271,7 @@ Les notebooks suivants sont disponibles dans le depot CoursIA ([jsboige/CoursIA]
 | [N2](#n2--raisonnement-causal-par-le-do-calculus-avec-dowhy) | Raisonnement causal par le do-calculus avec DoWhy | 3/5 |
 | [N3](#n3--diagnostic-abductif--raisonnement-par-abduction) | Diagnostic abductif — raisonnement par abduction | 3/5 |
 | [N4](#n4--evaluation-du-raisonnement-causal-des-llm) | Evaluation du raisonnement causal des LLM | 4/5 |
+| [N5](#n5--planification-oncologique-symbolique-ontologies-z3-et-modeles-probabilistes) | Planification oncologique symbolique (ontologies, Z3 et modeles probabilistes) | 4/5 |
 
 ### Categorie O : Raisonnement Qualitatif et Bon Sens
 
@@ -1843,6 +1847,38 @@ Multi-Agent Reinforcement Learning (MARL) etend l'apprentissage par renforcement
 
 ---
 
+#### J6 — Diagnostic medical multi-paradigme par agents symboliques
+
+Le diagnostic medical est un probleme classique d'IA symbolique qui se prete naturellement a une architecture multi-agents : un agent de recherche parcourt l'espace des diagnostics differentiels (A* sur un graphe de symptomes-maladies), un agent de validation verifie la coherence des hypotheses par rapport aux contraintes cliniques (Z3/SMT), un agent d'optimisation recherche les examens complementaires les plus informatifs (theorie de l'information, gain d'entropie), et un agent de connaissance gere l'ontologie medicale (RDF/OWL sur des bases SNOMED CT ou OpenMRS). Ce sujet propose d'implementer cette architecture en s'appuyant sur les notebooks CaseStudies/Diagnostic-Medical du depot CoursIA qui fournissent un sujet complet avec donnees, solution et templates etudiants.
+
+### Objectifs
+- Implementer un agent de diagnostic par recherche heuristique (A* ou best-first) sur un graphe de symptomes-maladies avec donnees medicales synthetiques
+- Implementer un agent de validation par contraintes Z3/SMT qui verifie la coherence des hypotheses diagnostiques (incompatibilites medicamenteuses, contre-indications)
+- Implementer un agent de selection d'examens par theorie de l'information (maximiser le gain d'entropie sur les diagnostics restants)
+- Integrer les agents via une architecture multi-agents coordonnee (blackboard ou message-passing) avec un agent orchestrateur
+- Evaluer sur les cas cliniques du CaseStudies/Diagnostic-Medical et comparer avec un diagnostic bayesien naif (Infer.NET)
+
+### Notebooks CoursIA pertinents
+
+| Notebook | Chemin | Pertinence |
+|----------|--------|------------|
+| CaseStudies Diagnostic | [CaseStudies/Diagnostic-Medical/](https://github.com/jsboige/CoursIA/tree/main/MyIA.AI.Notebooks/CaseStudies/Diagnostic-Medical/) | Sujet complet avec donnees et solutions |
+| Search-3 A* Heuristiques | [Search/Part1-Foundations/Search-3-A-Star.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part1-Foundations/Search-3-A-Star.ipynb) | Recherche heuristique |
+| Linq2Z3 | [SymbolicAI/Linq2Z3.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Linq2Z3.ipynb) | Validation par contraintes SMT |
+| Probas Infer-101 | [Probas/Infer-101.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Probas/Infer-101.ipynb) | Diagnostic bayesien |
+| Planners-1 Intro | [SymbolicAI/Planners/Planners-1-Intro.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Planners/Planners-1-Intro.ipynb) | Planification, PDDL |
+
+### References externes
+- Shortliffe, E.H. (1976). *Computer-Based Medical Consultations: MYCIN*. Elsevier. [ScienceDirect](https://doi.org/10.1016/C2013-0-11310-5)
+- Pearl, J. (1988). *Probabilistic Reasoning in Intelligent Systems*. Morgan Kaufmann. [Elsevier](https://doi.org/10.1016/C2009-0-27609-4)
+- Miller, R.A. et al. (1982). "Internist-1, an Experimental Computer-Based Diagnostic Consultant for General Internal Medicine." *NEJM*, 307(8), 468-476. [NEJM](https://www.nejm.org/doi/full/10.1056/NEJM198208193070803)
+- SNOMED CT. [snomed.org](https://www.snomed.org/)
+- Reggia, J.A. et al. (1983). "A Formal Model of Diagnostic Inference." *Information Sciences*, 37(1-3), 227-285. [Elsevier](https://doi.org/10.1016/0020-0255(85)90033-7)
+
+### Difficulte : 4/5
+
+---
+
 ### Categorie K : Cryptographie Symbolique et Securite
 
 #### K1 — Cryptanalyse par contraintes de chiffrements classiques
@@ -2030,6 +2066,37 @@ Implementer un joueur artificiel pour un jeu combinatoire a information complete
 
 ---
 
+#### L4 — Benchmark cross-paradigme de solveurs de jeux (Sudoku, Connect Four, Wordle)
+
+Constituer un benchmark unifie comparant 17+ solveurs Sudoku (SAT, CSP, CP-SAT, Dancing Links, DWave quantum, Genetic Algorithm, etc.), 8 algorithmes de jeu Connect Four (minimax, alpha-beta, MCTS, expectimax, réseau de neurones) et des solveurs Wordle (élimination bayésienne, entropie maximale, CSP). L'objectif est de mesurer systématiquement les performances (temps CPU, nombre d'explorations, taux de succès) de chaque paradigme sur une grille commune de instances (facile à diabolique pour Sudoku, profondeur 1-10 pour Connect Four, longueurs 5-8 pour Wordle). Les notebooks CoursIA offrent 33 notebooks Sudoku et 8 algorithmes Connect Four prêts à l'emploi, permettant de se concentrer sur l'analyse comparative plutôt que sur l'implémentation.
+
+### Objectifs
+1. Instrumenter les solveurs Sudoku existants (17 paradigmes dans `Sudoku/`) avec des métriques unifiées (temps, nœuds explorés, mémoire)
+2. Étendre le benchmark à Connect Four (8 IA dans `Search/Applications/Hybrid/`) et Wordle en définissant des instances de difficulté croissante
+3. Produire un tableau comparatif et des visualisations (heatmaps, scatter plots temps vs. difficulté) par paradigme
+4. Analyser les points forts structurels de chaque paradigme (SAT pour la décision, CP pour l'optimisation sous contraintes, MCTS pour les jeux à information incomplète)
+5. Proposer un guide de sélection du paradigme optimal en fonction de la classe de problème
+
+### Notebooks CoursIA pertinents
+
+| Notebook | Chemin | Pertinence |
+|----------|--------|------------|
+| Sudoku/ (33 notebooks) | [Sudoku/](https://github.com/jsboige/CoursIA/tree/main/MyIA.AI.Notebooks/Sudoku) | 17 solveurs SAT, CSP, CP-SAT, DLX, quantique |
+| App-12 Connect Four | [Search/Applications/Hybrid/App-12-ConnectFour.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Applications/Hybrid/App-12-ConnectFour.ipynb) | 8 algorithmes de jeu |
+| App-14 Connect Four RL | [Search/Applications/Hybrid/App-14-ConnectFour-RL.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Applications/Hybrid/App-14-ConnectFour-RL.ipynb) | RL sur Connect Four |
+| Search-6 Adversarial | [Search/Part1-Foundations/Search-6-Adversarial.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part1-Foundations/Search-6-Adversarial.ipynb) | Minimax, alpha-beta |
+| GT-8 Combinatorial Games | [GameTheory/GameTheory-8-CombinatorialGames.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-8-CombinatorialGames.ipynb) | Théorie des jeux combinatoires |
+
+### References externes
+- Simonis, H. (2005). "Sudoku as a SAT Problem." *Proc. ISAIM*. [EasyChair](https://easychair.org/publications/paper/Sudoku-as-a-SAT-Problem)
+- Lynce, I. & Ouaknine, J. (2006). "Sudoku as a SAT Problem." *Proc. SAT*. [Springer](https://link.springer.com/chapter/10.1007/11814948_25)
+- Browne, C. et al. (2012). "A Survey of Monte Carlo Tree Search Methods." *IEEE TCIAIG*. [IEEE](https://ieeexplore.ieee.org/document/6145622)
+- Knuth, D.E. (2000). "Dancing Links." *Millennial Perspectives in Computer Science*. [cs.stanford.edu](https://www-cs-faculty.stanford.edu/~knuth/papers/dancing-color.pdf)
+
+### Difficulte : 3/5
+
+---
+
 ### Categorie M : IA Neuro-Symbolique
 
 #### M1 — Pipeline LLM + verificateur symbolique pour la generation fiable
@@ -2209,6 +2276,37 @@ Integrated Information Theory (IIT), proposee par Giulio Tononi, postule que la 
 
 ---
 
+#### M7 — Generation de contenu neuro-symbolique par Semantic Kernel + validation CSP
+
+Concevoir un pipeline de generation de contenu structure (plans de cours, examens, rapports techniques) combinant Microsoft Semantic Kernel (orchestration LLM, plugins, mémoire vectorielle) avec un validateur symbolique CSP/CP-SAT. Le LLM genere des candidats JSON (emploi du temps, QCM avec contraintes de couverture), le solveur symbolique verifie les contraintes dures (pas de chevauchement, couverture minimale des objectifs pedagogiques) et injecte les violations comme feedback structure dans le prompt suivant. L'architecture hybride "LLM generateur + CSP verificateur" est le pattern neuro-symbolique le plus industriellement deployable. Les 18 notebooks Semantic Kernel du CoursIA couvrent plugins, RAG, function calling et agents autonomes.
+
+### Objectifs
+1. Implémenter un pipeline Semantic Kernel avec plugins de génération et de validation CSP
+2. Modéliser les contraintes du domaine (couverture de syllabus, non-chevauchement, charge équilibrée) en CP-SAT
+3. Étudier le taux de convergence itératif (nombre de cycles LLM→CSP→feedback avant satisfaction) et la qualité du résultat final
+4. Comparer l'approche neuro-symbolique itérative avec une génération LLM pure et un solveur CSP pur
+5. Étendre le pipeline avec un plugin de mémoire vectorielle (embeddings) pour éviter la répétition de contenu
+
+### Notebooks CoursIA pertinents
+
+| Notebook | Chemin | Pertinence |
+|----------|--------|------------|
+| SK-01 Plugin Basics | [GenAI/SemanticKernel/SK-01-Plugin-Basics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GenAI/SemanticKernel/SK-01-Plugin-Basics.ipynb) | Plugins Semantic Kernel |
+| SK-03 RAG | [GenAI/SemanticKernel/SK-03-RAG.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GenAI/SemanticKernel/SK-03-RAG.ipynb) | Retrieval-Augmented Generation |
+| SK-06 Function Calling | [GenAI/SemanticKernel/SK-06-Function-Calling.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GenAI/SemanticKernel/SK-06-Function-Calling.ipynb) | Appels de fonctions structurés |
+| CSP-6 LLM+CSP | [Search/Part2-CSP/CSP-6-LLM-CSP.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-6-LLM-CSP.ipynb) | Pipeline LLM + validation CSP |
+| GenAI/SemanticKernel/ | [GenAI/SemanticKernel/](https://github.com/jsboige/CoursIA/tree/main/MyIA.AI.Notebooks/GenAI/SemanticKernel) | 18 notebooks Semantic Kernel |
+
+### References externes
+- Bubeck, S. et al. (2023). "Sparks of Artificial General Intelligence: Early Experiments with GPT-4." *arXiv*. [arXiv](https://arxiv.org/abs/2303.12712)
+- Liang, T. et al. (2024). "LLM+Optimization: Towards Integrating Large Language Models and Optimization." *arXiv*. [arXiv](https://arxiv.org/abs/2401.17094)
+- Microsoft (2024). "Semantic Kernel Documentation." [learn.microsoft.com](https://learn.microsoft.com/en-us/semantic-kernel/)
+- Yao, S. et al. (2023). "ReAct: Synergizing Reasoning and Acting in Language Models." *ICLR 2023*. [arXiv](https://arxiv.org/abs/2210.03629)
+
+### Difficulte : 4/5
+
+---
+
 ### Categorie N : Raisonnement Causal et Decision
 
 #### N1 — Decouverte causale a partir de donnees observationnelles
@@ -2326,6 +2424,37 @@ Evaluer si les grands modeles de langage peuvent raisonner causalement de manier
 - Jin, Z. et al. (2023). "CLADDER: A Benchmark to Assess Causal Reasoning Capabilities of Language Models." *NeurIPS 2023*. [OpenReview](https://openreview.net/forum?id=kkQU6I4Igo)
 - Pearl, J. (2018). "The Seven Tools of Causal Inference." *CACM*. [ACM](https://cacm.acm.org/research/the-seven-tools-of-causal-inference-with-reflections-on-machine-learning/)
 - Liu, V. et al. (2023). "Are Large Language Models Good Causal Reasoners?" *EMNLP 2023*. [ACL Anthology](https://aclanthology.org/2023.emnlp-main.pa/)
+
+### Difficulte : 4/5
+
+---
+
+#### N5 — Planification oncologique symbolique (ontologies, Z3 et modeles probabilistes)
+
+Construire un systeme d'aide a la decision pour la planification de traitements oncologiques combinant trois couches symboliques : (1) une ontologie OWL des protocoles de chimiotherapie, contre-indications et interactions medicamenteuses, raisonnee via un moteur SPARQL/HermiT ; (2) un modele de contraintes Z3/SMT encodant les regles cliniques (doses cumulees maximales, intervalles minimums, compatibilite avec pathologies preexistantes) ; (3) un modele probabiliste PyMC/HMM estiment les parametres patient-specifiques (risque de recurrence, toxicite attendue). Le cas d'etude s'appuie sur le dataset oncologique du CoursIA (`CaseStudies/Oncology-Planning/`), qui fournit un modele complet de planification symbolique. Ce sujet illustre l'integration multi-paradigme : logique de description + contraintes SMT + probabilites, le triptyque au coeur de l'IA symbolique moderne.
+
+### Objectifs
+1. Modéliser l'ontologie des protocoles oncologiques en OWL (classes : Agent, Protocole, Pathologie ; propriétés : contre-indication, synergie)
+2. Encoder les règles cliniques en Z3/SMT (dose cumulée ≤ seuil, intervalle ≥ minimum, compatibilité patient-traitement)
+3. Implémenter un modèle probabiliste PyMC pour estimer le risque patient-spécifique à partir de variables cliniques
+4. Intégrer les trois couches dans un pipeline de décision : ontologie → contraintes → probabilités → recommandation
+5. Valider sur les cas cliniques du CoursIA et comparer avec les recommandations du panel d'oncologues
+
+### Notebooks CoursIA pertinents
+
+| Notebook | Chemin | Pertinence |
+|----------|--------|------------|
+| Oncology Planning | [CaseStudies/Oncology-Planning/](https://github.com/jsboige/CoursIA/tree/main/MyIA.AI.Notebooks/CaseStudies/Oncology-Planning) | Cas complet planification oncologique |
+| Linq2Z3 | [SymbolicAI/Linq2Z3.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Linq2Z3.ipynb) | Z3 SMT Solver depuis C# |
+| PyMC HMM | [Probas/PyMC-HMM-Trading-Alpha.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Probas/PyMC-HMM-Trading-Alpha.ipynb) | PyMC, modèles hiérarchiques |
+| CSP-4 Scheduling | [Search/Part2-CSP/CSP-4-Scheduling.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-4-Scheduling.ipynb) | Ordonnancement sous contraintes |
+| Diagnostic Medical | [CaseStudies/Diagnostic-Medical/](https://github.com/jsboige/CoursIA/tree/main/MyIA.AI.Notebooks/CaseStudies/Diagnostic-Medical) | Diagnostic multi-paradigme |
+
+### References externes
+- Abécassis, J. et al. (2019). "Ontologie des protocoles de chimiothérapie : du modèle à la décision clinique." *BMC Medical Informatics*. [BioMed Central](https://bmcmedinformdecismak.biomedcentral.com/)
+- Dechter, R. (2003). *Constraint Processing*. Morgan Kaufmann. [Elsevier](https://www.elsevier.com/books/constraint-processing/dechter/978-1-55860-890-0)
+- Salvatier, J. et al. (2016). "Probabilistic Programming in Python Using PyMC3." *PeerJ Computer Science*. [PeerJ](https://peerj.com/articles/cs-55/)
+- Horridge, M. et al. (2012). "A Practical Guide to Building OWL Ontologies Using Protégé 4." *University of Manchester Technical Report*. [cs.man.ac.uk](https://www.cs.man.ac.uk/~horridgm/)
 
 ### Difficulte : 4/5
 
