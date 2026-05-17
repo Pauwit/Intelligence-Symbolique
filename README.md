@@ -1863,10 +1863,10 @@ Le diagnostic medical est un probleme classique d'IA symbolique qui se prete nat
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
 | CaseStudies Diagnostic | [CaseStudies/Diagnostic-Medical/](https://github.com/jsboige/CoursIA/tree/main/MyIA.AI.Notebooks/CaseStudies/Diagnostic-Medical/) | Sujet complet avec donnees et solutions |
-| Search-3 A* Heuristiques | [Search/Part1-Foundations/Search-3-A-Star.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part1-Foundations/Search-3-A-Star.ipynb) | Recherche heuristique |
+| Search-3 Informed Search | [Search/Part1-Foundations/Search-3-Informed.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part1-Foundations/Search-3-Informed.ipynb) | Recherche heuristique, A* |
 | Linq2Z3 | [SymbolicAI/Linq2Z3.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Linq2Z3.ipynb) | Validation par contraintes SMT |
 | Probas Infer-101 | [Probas/Infer-101.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Probas/Infer-101.ipynb) | Diagnostic bayesien |
-| Planners-1 Intro | [SymbolicAI/Planners/Planners-1-Intro.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Planners/Planners-1-Intro.ipynb) | Planification, PDDL |
+| Planners-1 Introduction | [SymbolicAI/Planners/01-Foundation/Planners-1-Introduction.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/SymbolicAI/Planners/01-Foundation/Planners-1-Introduction.ipynb) | Planification, PDDL |
 
 ### References externes
 - Shortliffe, E.H. (1976). *Computer-Based Medical Consultations: MYCIN*. Elsevier. [ScienceDirect](https://doi.org/10.1016/C2013-0-11310-5)
@@ -2068,7 +2068,7 @@ Implementer un joueur artificiel pour un jeu combinatoire a information complete
 
 #### L4 — Benchmark cross-paradigme de solveurs de jeux (Sudoku, Connect Four, Wordle)
 
-Constituer un benchmark unifie comparant 17+ solveurs Sudoku (SAT, CSP, CP-SAT, Dancing Links, DWave quantum, Genetic Algorithm, etc.), 8 algorithmes de jeu Connect Four (minimax, alpha-beta, MCTS, expectimax, réseau de neurones) et des solveurs Wordle (élimination bayésienne, entropie maximale, CSP). L'objectif est de mesurer systématiquement les performances (temps CPU, nombre d'explorations, taux de succès) de chaque paradigme sur une grille commune de instances (facile à diabolique pour Sudoku, profondeur 1-10 pour Connect Four, longueurs 5-8 pour Wordle). Les notebooks CoursIA offrent 33 notebooks Sudoku et 8 algorithmes Connect Four prêts à l'emploi, permettant de se concentrer sur l'analyse comparative plutôt que sur l'implémentation.
+Constituer un benchmark unifie comparant 17 paradigmes de solveurs Sudoku (SAT, CSP, CP-SAT, Dancing Links, DWave quantum, Genetic Algorithm, etc. — 34 notebooks C# et Python), 8 algorithmes de jeu Connect Four (minimax, alpha-beta, MCTS, expectimax, reseau de neurones) et des solveurs Wordle (elimination bayesienne, entropie maximale, CSP). L'objectif est de mesurer systematiquement les performances (temps CPU, nombre d'explorations, taux de succes) de chaque paradigme sur une grille commune d'instances (facile a diabolique pour Sudoku, profondeur 1-10 pour Connect Four, longueurs 5-8 pour Wordle). Les notebooks CoursIA offrent 34 notebooks Sudoku (17 paradigmes en C# et Python) et 8 algorithmes Connect Four prets a l'emploi, permettant de se concentrer sur l'analyse comparative plutot que sur l'implementation.
 
 ### Objectifs
 1. Instrumenter les solveurs Sudoku existants (17 paradigmes dans `Sudoku/`) avec des métriques unifiées (temps, nœuds explorés, mémoire)
@@ -2081,10 +2081,10 @@ Constituer un benchmark unifie comparant 17+ solveurs Sudoku (SAT, CSP, CP-SAT, 
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| Sudoku/ (33 notebooks) | [Sudoku/](https://github.com/jsboige/CoursIA/tree/main/MyIA.AI.Notebooks/Sudoku) | 17 solveurs SAT, CSP, CP-SAT, DLX, quantique |
-| App-12 Connect Four | [Search/Applications/Hybrid/App-12-ConnectFour.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Applications/Hybrid/App-12-ConnectFour.ipynb) | 8 algorithmes de jeu |
-| App-14 Connect Four RL | [Search/Applications/Hybrid/App-14-ConnectFour-RL.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Applications/Hybrid/App-14-ConnectFour-RL.ipynb) | RL sur Connect Four |
-| Search-6 Adversarial | [Search/Part1-Foundations/Search-6-Adversarial.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part1-Foundations/Search-6-Adversarial.ipynb) | Minimax, alpha-beta |
+| Sudoku/ (34 notebooks) | [Sudoku/](https://github.com/jsboige/CoursIA/tree/main/MyIA.AI.Notebooks/Sudoku) | 17 paradigmes (C# et Python), SAT, CSP, CP-SAT, DLX, quantique |
+| App-12 Connect Four | [Search/Applications/Search/App-12-ConnectFour.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Applications/Search/App-12-ConnectFour.ipynb) | 8 algorithmes de jeu |
+| App-14 Connect Four Adversarial | [Search/Applications/Search/App-14-ConnectFour-Adversarial.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Applications/Search/App-14-ConnectFour-Adversarial.ipynb) | Jeux adversariaux |
+| Search-6 Adversarial Search | [Search/Part1-Foundations/Search-6-AdversarialSearch.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part1-Foundations/Search-6-AdversarialSearch.ipynb) | Minimax, alpha-beta |
 | GT-8 Combinatorial Games | [GameTheory/GameTheory-8-CombinatorialGames.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GameTheory/GameTheory-8-CombinatorialGames.ipynb) | Théorie des jeux combinatoires |
 
 ### References externes
@@ -2278,7 +2278,7 @@ Integrated Information Theory (IIT), proposee par Giulio Tononi, postule que la 
 
 #### M7 — Generation de contenu neuro-symbolique par Semantic Kernel + validation CSP
 
-Concevoir un pipeline de generation de contenu structure (plans de cours, examens, rapports techniques) combinant Microsoft Semantic Kernel (orchestration LLM, plugins, mémoire vectorielle) avec un validateur symbolique CSP/CP-SAT. Le LLM genere des candidats JSON (emploi du temps, QCM avec contraintes de couverture), le solveur symbolique verifie les contraintes dures (pas de chevauchement, couverture minimale des objectifs pedagogiques) et injecte les violations comme feedback structure dans le prompt suivant. L'architecture hybride "LLM generateur + CSP verificateur" est le pattern neuro-symbolique le plus industriellement deployable. Les 18 notebooks Semantic Kernel du CoursIA couvrent plugins, RAG, function calling et agents autonomes.
+Concevoir un pipeline de generation de contenu structure (plans de cours, examens, rapports techniques) combinant Microsoft Semantic Kernel (orchestration LLM, plugins, memoire vectorielle) avec un validateur symbolique CSP/CP-SAT. Le LLM genere des candidats JSON (emploi du temps, QCM avec contraintes de couverture), le solveur symbolique verifie les contraintes dures (pas de chevauchement, couverture minimale des objectifs pedagogiques) et injecte les violations comme feedback structure dans le prompt suivant. L'architecture hybride "LLM generateur + CSP verificateur" est le pattern neuro-symbolique le plus industriellement deployable. Note : le notebook CSP-6 du CoursIA couvre les approches hybrides CSP modernes (pas de pipeline LLM+CSP pret a l'emploi) — les etudiants devront implementer l'integration SK+CSP eux-memes en s'appuyant sur les 20 notebooks Semantic Kernel et les outils de validation CSP.
 
 ### Objectifs
 1. Implémenter un pipeline Semantic Kernel avec plugins de génération et de validation CSP
@@ -2291,11 +2291,11 @@ Concevoir un pipeline de generation de contenu structure (plans de cours, examen
 
 | Notebook | Chemin | Pertinence |
 |----------|--------|------------|
-| SK-01 Plugin Basics | [GenAI/SemanticKernel/SK-01-Plugin-Basics.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GenAI/SemanticKernel/SK-01-Plugin-Basics.ipynb) | Plugins Semantic Kernel |
-| SK-03 RAG | [GenAI/SemanticKernel/SK-03-RAG.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GenAI/SemanticKernel/SK-03-RAG.ipynb) | Retrieval-Augmented Generation |
-| SK-06 Function Calling | [GenAI/SemanticKernel/SK-06-Function-Calling.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GenAI/SemanticKernel/SK-06-Function-Calling.ipynb) | Appels de fonctions structurés |
-| CSP-6 LLM+CSP | [Search/Part2-CSP/CSP-6-LLM-CSP.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-6-LLM-CSP.ipynb) | Pipeline LLM + validation CSP |
-| GenAI/SemanticKernel/ | [GenAI/SemanticKernel/](https://github.com/jsboige/CoursIA/tree/main/MyIA.AI.Notebooks/GenAI/SemanticKernel) | 18 notebooks Semantic Kernel |
+| SK Intro | [GenAI/SemanticKernel/01-SemanticKernel-Intro.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GenAI/SemanticKernel/01-SemanticKernel-Intro.ipynb) | Introduction Semantic Kernel |
+| SK Agents | [GenAI/SemanticKernel/03-SemanticKernel-Agents.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GenAI/SemanticKernel/03-SemanticKernel-Agents.ipynb) | Function calling, agents autonomes |
+| SK Vector Stores | [GenAI/SemanticKernel/05-SemanticKernel-VectorStores.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/GenAI/SemanticKernel/05-SemanticKernel-VectorStores.ipynb) | RAG, embeddings vectoriels |
+| CSP-6 Hybridation | [Search/Part2-CSP/CSP-6-Hybridization.ipynb](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/Search/Part2-CSP/CSP-6-Hybridization.ipynb) | Approches hybrides CSP modernes |
+| GenAI/SemanticKernel/ | [GenAI/SemanticKernel/](https://github.com/jsboige/CoursIA/tree/main/MyIA.AI.Notebooks/GenAI/SemanticKernel) | 20 notebooks Semantic Kernel |
 
 ### References externes
 - Bubeck, S. et al. (2023). "Sparks of Artificial General Intelligence: Early Experiments with GPT-4." *arXiv*. [arXiv](https://arxiv.org/abs/2303.12712)
@@ -2451,7 +2451,7 @@ Construire un systeme d'aide a la decision pour la planification de traitements 
 | Diagnostic Medical | [CaseStudies/Diagnostic-Medical/](https://github.com/jsboige/CoursIA/tree/main/MyIA.AI.Notebooks/CaseStudies/Diagnostic-Medical) | Diagnostic multi-paradigme |
 
 ### References externes
-- Abécassis, J. et al. (2019). "Ontologie des protocoles de chimiothérapie : du modèle à la décision clinique." *BMC Medical Informatics*. [BioMed Central](https://bmcmedinformdecismak.biomedcentral.com/)
+- Abécassis, J. et al. (2019). "Ontologie des protocoles de chimiothérapie : du modèle à la décision clinique." *BMC Medical Informatics and Decision Making*. [DOI](https://doi.org/10.1186/s12911-019-0809-y)
 - Dechter, R. (2003). *Constraint Processing*. Morgan Kaufmann. [Elsevier](https://www.elsevier.com/books/constraint-processing/dechter/978-1-55860-890-0)
 - Salvatier, J. et al. (2016). "Probabilistic Programming in Python Using PyMC3." *PeerJ Computer Science*. [PeerJ](https://peerj.com/articles/cs-55/)
 - Horridge, M. et al. (2012). "A Practical Guide to Building OWL Ontologies Using Protégé 4." *University of Manchester Technical Report*. [cs.man.ac.uk](https://www.cs.man.ac.uk/~horridgm/)
